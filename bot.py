@@ -87,8 +87,8 @@ async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(bot_response, parse_mode='Markdown')
 
     except Exception as e:
-        print(f"Error: {e}")
-        await update.message.reply_text("❌ Sorry, I'm a bit overwhelmed. Can you try again?")
+        print("Groq Error:", e)
+        await update.message.reply_text(f"❌ Groq Error: {e}")
 
 # --- MAIN ---
 
